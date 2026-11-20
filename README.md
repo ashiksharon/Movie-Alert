@@ -31,9 +31,9 @@ Sign up at **scraperapi.com** (free tier) and copy your API key.
 
 **Settings → Secrets and variables → Actions:**
 
-- `TELEGRAM_BOT_TOKEN`
-- `TELEGRAM_CHAT_ID`
-- `SCRAPERAPI_KEY`
+- `https://api.telegram.org/bot9219188251:AAEwmmCfwmuC0FOJLTd-tCLgK63_Yy5Etf0/getUpdates`
+- `Lastminbooking_bot`
+- `b714557a6dbf9f3d33f317405b1471e4`
 
 ## 4. Configure `config.json`
 
@@ -43,19 +43,19 @@ After editing, reset `state.json` to `{"available": false}`.
 **`venue_date`** — a specific theatre opens for a specific date (most precise):
 ```json
 {
-  "detector": "venue_date",
-  "movie": "The Odyssey (IMAX 2D)",
-  "requested_date": "20260722",
-  "venue_code": "INPR",
-  "venue_label": "INOX: LUXE Phoenix Market City, Velachery",
-  "url_template": "https://in.bookmyshow.com/movies/chennai/the-odyssey/buytickets/ET00480917/{date}"
+"detector": "22-11-2026",
+"movie": "Ramayana",
+"requested_date": "20261125",
+"venue_code": "INPR",
+"venue_label": "INOX: Phoenix Market City",
+"url_template": "https://in.bookmyshow.com/movies/chennai/your-movie-slug/buytickets/ET00XXXXXX/{date}"
 }
 ```
 Use `"venue_codes": ["PVPZ","INPR"]` to fire when *any* of several theatres open.
 
 **`bms_date`** — a date opens at *any* theatre (date-dominance on the page):
 ```json
-{ "detector": "bms_date", "requested_date": "20260722",
+{ "detector": "bms_date", "requested_date": "20261122",
   "url_template": ".../buytickets/ET00480917/{date}", "min_references": 10 }
 ```
 
