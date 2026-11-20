@@ -25,30 +25,14 @@ by **cron-job.org** — nothing to keep running on your own machine.
 
 ## 2. ScraperAPI key
 
-Sign up at **scraperapi.com** (free tier) and copy your API key.
-
-## 3. Add repo secrets
-
-**Settings → Secrets and variables → Actions:**
-
-- `https://api.telegram.org/bot9219188251:AAEwmmCfwmuC0FOJLTd-tCLgK63_Yy5Etf0/getUpdates`
-- `Lastminbooking_bot`
-- `b714557a6dbf9f3d33f317405b1471e4`
+Sign up at **scraperapi.com** (free tier) and copy your API 
 
 ## 4. Configure `config.json`
 
 Pick a `detector`. The page URL is built from `url_template` + `requested_date`.
 After editing, reset `state.json` to `{"available": false}`.
 
-**`venue_date`** — a specific theatre opens for a specific date (most precise):
-```json
-{
-"detector": "22-11-2026",
-"movie": "Ramayana",
-"requested_date": "20261125",
-"venue_code": "INPR",
-"venue_label": "INOX: Phoenix Market City",
-"url_template": "https://in.bookmyshow.com/movies/chennai/your-movie-slug/buytickets/ET00XXXXXX/{date}"
+**`venue_date`** — a specific theatre opens }"
 }
 ```
 Use `"venue_codes": ["PVPZ","INPR"]` to fire when *any* of several theatres open.
